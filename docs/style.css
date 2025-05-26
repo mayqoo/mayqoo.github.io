@@ -103,6 +103,7 @@ width:100%;
   font-size: 1.1em;
   line-height: 1.4;
   margin-bottom: 5px;
+  white-space: nowrap; /* テキストの途中で改行しない */
 }
 
 /* 2行目の電話番号（絵文字なし）の位置揃え */
