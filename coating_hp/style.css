@@ -20,7 +20,7 @@ body{
 color:#555;
 font-size:13px;
 font-family:verdana,"ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
-line-height:1.5;
+line-height:1.7;
 -webkit-text-size-adjust:100%;
 background:#f7f7f7;
 }
@@ -129,7 +129,7 @@ width:100%;
 /**************************
 /* メイン画像（トップページ+サブページ）
 **************************/
-.container {
+#container {
   display: flex; /* 画像とテキストを横並びにする場合 */
   flex-direction: column; /* デフォルトは縦並び */
   align-items: flex-start; /* 左寄せ */
@@ -138,7 +138,7 @@ width:100%;
   max-width: 500px; /* 必要に応じて最大幅を設定 */
 }
 
-.container img {
+#container img {
   max-width: 100%; /* 画像が親要素からはみ出さないように */
   height: auto;
   display: block; /* インライン要素の余白問題を解消 */
@@ -153,18 +153,14 @@ width:100%;
   width: 100%;
 }
 
-.text-container {
-  background-color: #e6f7ff; /* 薄い水色の背景 */
-  padding: 20px;
-  border-radius: 5px;
-  margin-top: 15px;
-}
-
 .text-container p {
   padding: 15px;
   border-radius: 3px;
-  font-size: 1.4em;
-  line-height: 1.6;
+  /* font-size: 1.4em; */ /* 現在の値。これを基準に調整します */
+  font-size: 1.5em; /* 例: 少し大きくする (13px * 1.5 = 19.5px) */
+  /* または、bodyのフォントサイズを基準にしたいなら、例えば */
+  /* font-size: 16px; */ /* または 18px など、具体的なピクセル値で指定 */
+  line-height: 1.7; /* 行の高さを少しゆったりさせる */
   margin-bottom: 15px;
   color: #2a3de9; /* 強調色の赤 */
   background-color: white; /* 背景を白に */
@@ -175,7 +171,10 @@ width:100%;
   color: #1c86ee; /* 明るい青 */
   margin-top: 0;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */ /* 現在の値。これを基準に調整します */
+  font-size: 1.3em; /* 例: 見出しも少し大きくする (13px * 1.3 = 16.9px) */
+  /* または */
+  /* font-size: 20px; */ /* 具体的なピクセル値で指定 */
 }
 
 .text-container ul {
@@ -186,6 +185,10 @@ width:100%;
 .text-container li {
   margin-bottom: 8px;
   color: #495057; /* 標準的なグレー */
+  /* font-size: 16px; */ /* 現在の値。これを基準に調整します */
+  font-size: 1.1em; /* bodyの13pxに対する1.1倍なので、14.3pxに */
+  /* または、他のpタグなどと同じくらいにするなら */
+  /* font-size: 1.5em; */ /* pタグと同じサイズに */
 }
 
 .text-container li strong {
@@ -200,7 +203,7 @@ width:100%;
 
 /* レスポンシブ対応 (例: 768px以下の画面幅の場合) */
 @media screen and (max-width: 768px) {
-  .container {
+  #container {
     padding: 0 15px; /* 左右に少し余白を追加 */
   }
 }
