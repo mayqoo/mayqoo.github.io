@@ -105,6 +105,18 @@ width:100%;
   margin-bottom: 5px;
 }
 
+/* 2行目の電話番号（絵文字なし）の位置揃え */
+.contact-left .tel-second {
+    /* 絵文字の分のスペースを左に開ける */
+    padding-left: 1.5em; /* 絵文字の幅とマージンを考慮して調整 */
+    /* text-indent: -1.5em; */ /* 実際には `text-indent` は不要かもしれません */
+}
+
+/* メールアドレスと電話番号の間の間隔 */
+.contact-left p.tel:nth-last-of-type(2) {
+    margin-bottom: 10px;
+}
+
 .contact-left .label {
   display: none;
 }
